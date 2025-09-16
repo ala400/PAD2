@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Ton fichier CSS personnalisé -->
+  <link rel="stylesheet" href="pad.css">
+</head>
+
+<body class="contact-page">
+<!-- 
+  - ========================= NAVBAR ========================= -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary py-3">
+    <div class="container">
+      <div class="navbar-brand"><img src="logovf-removebg-preview.png" alt="mon logo" width="40" height="30"></div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="apropos.html">A propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+        <a class="btn btn-danger rounded-2" href="CV Alassane-DIALLO-Chimiste.pdf" download>Télécharger le CV</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========================= HERO (BANDEAU TITRE) ========================= -->
+  <header class="hero-top bg-secondary-subtle py-5">
+    <div class="container text-center">
+      <h1 class="display-5 fw-bold mb-2">Contactez-moi</h1>
+      <p class="lead text-muted mb-0">Discutons de votre projet et découvrons ensemble comment je peux vous accompagner dans votre transformation digitale.</p>
+    </div>
+  </header>
+
+  <!-- ========================= SECTION CONTACT ========================= -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- ===== Colonne gauche : FORMULAIRE ===== -->
+        <div class="col-lg-8">
+          <div class="p-4 bg-white border rounded-3 shadow-sm">
+            <h3 class="mb-1 fw-bold">Envoyez-moi un message</h3>
+            <p class="text-muted mb-4">Remplissez le formulaire ci-dessous et je vous répondrai dans les plus brefs délais.</p>
+
+            <form>
+              <div class="row g-3">
+
+                <div class="col-md-6">
+                  <label class="form-label">Nom complet *</label>
+                  <input type="text" class="form-control" placeholder="Votre nom et prénom">
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Email *</label>
+                  <input type="email" class="form-control" placeholder="exemple@mail.com">
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Type de projet</label>
+                  <select class="form-select">
+                    <option selected>Choisissez…</option>
+                    <option>Site vitrine</option>
+                    <option>E-commerce</option>
+                    <option>UX/UI Design</option>
+                    <option>Marketing digital</option>
+                    <option>Autre</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Sujet *</label>
+                  <input type="text" class="form-control" placeholder="Sujet de votre message">
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label">Message *</label>
+                  <textarea class="form-control" rows="5" placeholder="Décrivez votre projet, vos besoins, vos objectifs…"></textarea>
+                </div>
+
+                <div class="col-12">
+                  <button type="submit" class="btn btn-danger w-100">Envoyer le message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- ===== Colonne droite : INFOS ===== -->
+        <div class="col-lg-4">
+
+          <div class="p-4 bg-white border rounded-3 shadow-sm mb-4">
+            <h5 class="fw-bold mb-3">Informations de contact</h5>
+            <ul class="list-unstyled d-grid gap-3 mb-0">
+              <li class="d-flex align-items-start">
+                <i class="bi bi-envelope text-success me-2 mt-1"></i>
+                <div>
+                  <div class="fw-semibold">Email</div>
+                  <a class="text-decoration-none" href="mailto:aloualassane72@gmail.com">aloualassane72@gmail.com</a>
+                </div>
+              </li>
+              <li class="d-flex align-items-start">
+                <i class="bi bi-telephone text-success me-2 mt-1"></i>
+                <div>
+                  <div class="fw-semibold">Téléphone</div>
+                  <a class="text-decoration-none" href="tel:+221786352540">+221 78 635 25 40</a>
+                </div>
+              </li>
+              <li class="d-flex align-items-start">
+                <i class="bi bi-linkedin text-success me-2 mt-1"></i>
+                <div>
+                  <div class="fw-semibold">LinkedIn</div>
+                  <a class="text-decoration-none" href="#" target="_blank" rel="noopener">linkedin.com/alassane.d</a>
+                </div>
+              </li>
+              <li class="d-flex align-items-start">
+                <i class="bi bi-geo-alt text-success me-2 mt-1"></i>
+                <div>
+                  <div class="fw-semibold">Localisation</div>
+                  <span>Sénégal / Rufisque</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="p-4 bg-white border rounded-3 shadow-sm mb-4">
+            <h6 class="fw-bold mb-3"><i class="bi bi-info-circle me-2 text-success"></i>Temps de réponse</h6>
+            <p class="mb-3">Je m’engage à vous répondre sous 24 heures maximum, souvent plus rapidement.</p>
+            <ul class="mb-0">
+              <li>Réponse sous 24h</li>
+              <li>Devis gratuit</li>
+              <li>Première consultation offerte</li>
+              <li>Approche personnalisée</li>
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-3 text-center bg-sage">
+            <h5 class="fw-bold mb-2">Contact immédiat</h5>
+            <p class="mb-3 small">Pour une réponse ultra-rapide, contactez-moi directement sur WhatsApp.</p>
+            <a class="btn btn-dark" href="https://wa.me/221786352540" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= SECTION FAQ ========================= -->
+  <section id="faq" class="py-5 bg-secondary-subtle"> <!-- fond gris clair -->
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold mb-1">Questions fréquentes</h2>
+      <p class="text-muted mb-0">Les réponses aux questions les plus courantes</p>
+    </div>
+
+    <div class="row g-4"> <!-- 4 cartes FAQ -->
+      <div class="col-md-6">
+        <div class="p-4 bg-white border rounded-3 shadow-sm h-100">
+          <h6 class="fw-bold">Quels sont vos tarifs ?</h6>
+          <p class="text-muted mb-0">Mes tarifs varient selon la complexité et la durée du projet. Je propose toujours un devis personnalisé après une première consultation gratuite.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-4 bg-white border rounded-3 shadow-sm h-100">
+          <h6 class="fw-bold">Travaillez-vous en remote ?</h6>
+          <p class="text-muted mb-0">Oui, je travaille facilement à distance avec des outils collaboratifs modernes. Je peux aussi me déplacer selon les besoins du projet.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-4 bg-white border rounded-3 shadow-sm h-100">
+          <h6 class="fw-bold">Quelle est la durée moyenne d’un projet ?</h6>
+          <p class="text-muted mb-0">Généralement entre 2 et 8 mois selon le scope, avec des livrables réguliers (approche agile).</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-4 bg-white border rounded-3 shadow-sm h-100">
+          <h6 class="fw-bold">Accompagnez-vous après la livraison ?</h6>
+          <p class="text-muted mb-0">Oui, je propose des formules de maintenance et d’accompagnement pour assurer la pérennité de vos solutions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ========================= FOOTER ========================= -->
+  <footer class="pt-5 pb-4" style="background-color:#0A192F; color:#EAF0F6;">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-4">
+          <h6 class="text-uppercase">Alassane DIALLO</h6>
+          <p class="mb-0">Spécialisé en communication digitale, UX/UI et gestion de projet agile. Du laboratoire au digital, je crée et je connecte les idées aux besoins.</p>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-uppercase">Navigation</h6>
+          <ul class="list-unstyled mb-0">
+            <li><a href="index.html" class="link-light text-decoration-none">Accueil</a></li>
+            <li><a href="#apropos" class="link-light text-decoration-none">A propos</a></li>
+            <li><a href="#projets" class="link-light text-decoration-none">Projets</a></li>
+            <li><a href="#services" class="link-light text-decoration-none">Services / Compétences</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-uppercase">Contact</h6>
+          <p class="mb-1">aloualassane72@gmail.com</p>
+          <p class="mb-3">+221 78 635 25 40</p>
+          <div class="d-flex gap-3">
+            <a class="link-light" href="#"><i class="bi bi-linkedin"></i></a>
+            <a class="link-light" href="#"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <p class="text-center small mb-0">© 2025 Alassane Diallo. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+  

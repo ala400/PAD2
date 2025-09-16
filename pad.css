@@ -1,0 +1,517 @@
+/* ================================
+   Variables & base
+   ================================ */
+:root{
+  --brand-navy:#0A192F;       /* bleu nuit */
+  --brand-sage:#C7D3BF;       /* vert sauge */
+  --brand-sage-dark:#9EAC9A;  /* sauge hover */
+  --brand-brick:#B02323;      /* rouge brique */
+  --ink:#0E2237;              /* bleu encre (titres/texte) */
+  --muted:#6B7785;            /* texte secondaire */
+  --surface:#FFFFFF;          /* cartes/fond blanc */
+  --border:#E4E7EB;           /* bordures douces */
+  --footer-text:#EAF0F6;      /* texte clair footer */
+}
+
+html,body{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--ink);
+  background:#F7F8FA;
+}
+
+/* ================================
+   Navbar
+   ================================ */
+.navbar{
+  box-shadow:0 2px 6px rgba(10,25,47,.06);
+}
+.navbar .navbar-brand{
+  color:var(--ink);
+  font-weight:800;
+  letter-spacing:.5px;
+}
+.navbar .nav-link{
+  color:var(--ink);
+  font-weight:600;
+  padding:.25rem .75rem;
+  position:relative;
+}
+.navbar .nav-link:hover{ color:var(--ink); }
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after{
+  content:"";
+  position:absolute; left:.5rem; right:.5rem; bottom:-6px;
+  height:3px; border-radius:2px; background:var(--brand-sage);
+}
+.navbar .btn.btn-danger{
+  background:var(--brand-brick); border-color:var(--brand-brick); font-weight:700;
+}
+.navbar .btn.btn-danger:hover{ filter:brightness(.92); }
+
+/* ================================
+   HERO (nouvelle bannière)
+   ================================ */
+
+
+.hero-banner h1{
+  color:#fff; font-size:3rem; font-weight:800; line-height:1.25; margin-bottom:10rem;
+}
+.hero-banner .highlight{
+  color:var(--brand-sage);        /* mots mis en avant */
+}
+.hero-banner .lead{
+  color:#E2E7EE; font-size:1.15rem; margin-bottom:1.5rem;
+}
+.hero-banner .btn.btn-success{
+  background:var(--brand-sage); border-color:var(--brand-sage);
+  color:var(--brand-navy); font-weight:800;
+}
+.hero-banner .btn.btn-success:hover{
+  background:var(--brand-sage-dark); border-color:var(--brand-sage-dark);
+}
+/* HERO avec image en arrière-plan (visage visible, légèrement à gauche) */
+.hero-banner-bg {
+  position: relative;                 /* permet l’overlay en absolu */
+  min-height: 130vh;                   /* grande hauteur, quasi plein écran */
+  background-size: cover;             /* l’image remplit toute la zone */
+  background-position: 75% 5%;       /* <-- clé : décale un peu à gauche et focus sur le haut (visage) */
+  background-repeat: no-repeat;       /* pas de répétition */
+  display: flex;                      /* pour centrer verticalement le contenu */
+  align-items: center;                /* centre le texte sur l’axe Y */
+  padding: 4rem 0;                    /* respiration verticale */
+}
+
+/* Superposition sombre pour lisibilité du texte sur l’image */
+.hero-banner-bg .overlay {
+  position: absolute;
+  inset: 0;
+}
+
+/* Le contenu passe au-dessus de l’overlay */
+.hero-banner-bg .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Typo et couleurs dans le hero */
+.hero-banner-bg h1 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+.hero-banner-bg .highlight { color: var(--brand-sage); }
+.hero-banner-bg .lead { color: #E2E7EE; margin-bottom: 1.5rem; }
+.hero-banner-bg .btn.btn-success {
+  background: var(--brand-sage);
+  border-color: var(--brand-sage);
+  color: var(--brand-navy);
+  font-weight: 700;
+}
+.hero-banner-bg .btn.btn-success:hover {
+  background: var(--brand-sage-dark);
+  border-color: var(--brand-sage-dark);
+}
+
+/* Responsive : en mobile on recentre un peu l’image et on réduit la hauteur */
+@media (max-width: 991.98px) {
+  .hero-banner-bg {
+    background-position: center top;  /* centre le visage en mobile */
+    min-height: 70vh;                 /* un peu moins haut sur petit écran */
+    padding: 3rem 0;
+  }
+  .hero-banner-bg h1 { font-size: 2.25rem; }
+}
+
+/* ================================
+   Bloc valeurs (cartes)
+   ================================ */
+section.bg-white .border{
+  border-color:var(--border)!important;
+  box-shadow:0 6px 18px rgba(10,25,47,.06);
+  border-radius:14px;
+}
+section.bg-white .display-6{ color:var(--ink); }
+section.bg-white h5{ color:var(--ink); font-weight:800; }
+
+/* ================================
+   CTA rouge (bandeau)
+   ================================ */
+section[style*="#B02323"]{ color:#fff; }
+section[style*="#B02323"] .btn.btn-success{
+  background:var(--brand-sage); border-color:var(--brand-sage);
+  color:var(--brand-navy); font-weight:800;
+}
+section[style*="#B02323"] .btn.btn-success:hover{
+  background:var(--brand-sage-dark); border-color:var(--brand-sage-dark);
+}
+
+/* ================================
+   Footer
+   ================================ */
+footer[style*="#0A192F"]{ color:var(--footer-text)!important; }
+footer a.link-light{ opacity:.9; }
+footer a.link-light:hover{ opacity:1; text-decoration:underline; }
+footer hr{ border-color:rgba(234,240,246,.35)!important; }
+
+/* ================================
+   Utilitaires arrondis
+   ================================ */
+.rounded-3{ border-radius:14px!important; }
+.rounded-2{ border-radius:10px!important; }
+
+/* ================================
+   Responsive
+   ================================ */
+@media (max-width:991.98px){
+  .hero-banner{ padding:3rem 0; min-height:unset; }
+  .hero-banner h1{ font-size:2.25rem; }
+  .hero-img{ max-width:420px; margin-top:1rem; }
+  .navbar .nav-link::after{ bottom:-4px; }
+}
+@media (min-width:1200px){
+  .container{ max-width:1140px; } /* largeur confortable en desktop large */
+}
+
+
+
+
+/* ================================
+   CONTACT — BANNIÈRE (HERO TOP)
+   ================================ */
+.contact-page header.hero-top {
+  /* bandeau gris doux + respirations (garde tes classes Bootstrap) */
+  background: #EDEFF2;        /* équivalent à bg-secondary-subtle */
+  padding-block: 3.5rem;
+}
+.contact-page header.hero-top h1 {
+  color: var(--ink, #0E2237);
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+.contact-page header.hero-top .lead {
+  color: #6B7785;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+/* ================================
+   CONTACT — CARTES (formulaire, infos, FAQ)
+   ================================ */
+.contact-page .p-4.bg-white.border.rounded-3,
+.contact-page .p-4.bg-white.border.rounded-3.shadow-sm {
+  border-color: var(--border, #E4E7EB) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 8px 22px rgba(10,25,47,.06);
+}
+
+/* Titres dans les cartes */
+.contact-page .p-4 h3,
+.contact-page .p-4 h5,
+.contact-page .p-4 h6 {
+  color: var(--ink, #0E2237);
+  font-weight: 800;
+  margin-bottom: .75rem;
+}
+
+/* Petits textes */
+.contact-page .text-muted { color: #6B7785 !important; }
+
+/* ================================
+   CONTACT — FORMULAIRE
+   ================================ */
+.contact-page form .form-label {
+  font-weight: 700;
+  color: var(--ink, #0E2237);
+}
+.contact-page form .form-control,
+.contact-page form .form-select {
+  border-color: var(--border, #E4E7EB);
+  border-radius: 10px;
+  padding: .7rem .9rem;
+  transition: box-shadow .2s, border-color .2s;
+}
+.contact-page form .form-control::placeholder { color: #9AA6B2; }
+.contact-page form .form-control:focus,
+.contact-page form .form-select:focus {
+  border-color: var(--brand-sage, #C7D3BF);
+  box-shadow: 0 0 0 .25rem rgba(199,211,191,.35);
+}
+
+/* Bouton "Envoyer le message" */
+.contact-page button[type="submit"].btn.btn-danger,
+.contact-page .btn.btn-danger.w-100 {
+  background: var(--brand-brick, #B02323);
+  border-color: var(--brand-brick, #B02323);
+  font-weight: 800;
+  padding-block: .85rem;
+  border-radius: 10px;
+}
+.contact-page button[type="submit"].btn.btn-danger:hover,
+.contact-page .btn.btn-danger.w-100:hover {
+  filter: brightness(.92);
+}
+
+/* ================================
+   CONTACT — INFOS (icônes + texte)
+   ================================ */
+.contact-page .list-unstyled.d-grid.gap-3 li {
+  display: flex; align-items: flex-start;
+}
+.contact-page .list-unstyled.d-grid.gap-3 i {
+  font-size: 1.05rem;
+  color: var(--brand-sage, #C7D3BF);
+  margin-right: .6rem;
+  margin-top: .2rem;
+}
+.contact-page .list-unstyled.d-grid.gap-3 a {
+  color: inherit; text-decoration: none;
+}
+.contact-page .list-unstyled.d-grid.gap-3 a:hover {
+  text-decoration: underline;
+}
+
+/* ================================
+   CONTACT — BLOC WHATSAPP (fond sauge)
+   ================================ */
+.contact-page .bg-sage {
+  background: var(--brand-sage, #C7D3BF) !important;
+  color: var(--ink, #0E2237);
+  border-radius: 14px !important;
+  box-shadow: 0 6px 18px rgba(10,25,47,.06);
+}
+.contact-page .bg-sage .btn.btn-dark {
+  background: #222; border-color: #222; font-weight: 700;
+}
+.contact-page .bg-sage .btn.btn-dark:hover { filter: brightness(1.1); }
+
+/* ================================
+   CONTACT — SECTION FAQ
+   ================================ */
+.contact-page section.bg-secondary-subtle {
+  background: #ECEFF3 !important; /* gris doux de la bande FAQ */
+}
+.contact-page section.bg-secondary-subtle h2 {
+  color: var(--ink, #0E2237);
+  font-weight: 800;
+}
+.contact-page section.bg-secondary-subtle .p-4.bg-white.border.rounded-3 {
+  background: #F9FAFB;                /* léger contraste avec les cartes du haut */
+}
+.contact-page section.bg-secondary-subtle h6 {
+  color: var(--ink, #0E2237);
+  font-weight: 800;
+}
+.contact-page section.bg-secondary-subtle p {
+  color: #6B7785;
+  margin: 0;
+}
+
+/* ================================
+   CONTACT — NAVBAR (surlignage du lien actif)
+   ================================ */
+.contact-page .navbar .nav-link.active {
+  color: var(--ink, #9EAF88);
+  position: relative;
+}
+
+
+.contact-page .navbar .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: .5rem; right: .5rem; bottom: -6px;
+  height: 3px; border-radius: 2px;
+  background: var(--brand-sage);
+}
+
+.contact-page .navbar .navbar-brand{
+  color:var(--ink);
+  font-weight:800;
+  letter-spacing:.5px;
+}
+
+/* ================================
+   CONTACT — Responsive
+   ================================ */
+@media (max-width: 991.98px) {
+  .contact-page header.hero-top { padding-block: 2.5rem; }
+  .contact-page .p-4.bg-white.border.rounded-3,
+  .contact-page .p-4.bg-white.border.rounded-3.shadow-sm { border-radius: 12px !important; }
+}
+
+/* =========================================================
+   A PROPOS — Variables locales (couleurs cohérentes)
+   ========================================================= */
+.about-page {
+  --ink: #0E2237;           /* Bleu encre (titres/texte) */
+  --muted: #6B7785;         /* Gris texte secondaire */
+  --brick: #B02323;         /* Rouge brique (CTA si besoin) */
+  --sage: #9EAF88;          /* Vert sauge (accents, timeline) */
+  --sage-soft: #C7D3BF;     /* Sauge clair pour badges */
+  --surface: #FFFFFF;       /* Fond des cartes */
+  --surface-alt: #F3F4F6;   /* Fond gris clair de section */
+  --border: #E4E7EB;        /* Bordure douce */
+}
+
+/* =========================================================
+   HERO / EN-TÊTE
+   ========================================================= */
+.about-page .about-hero {
+  background: #ECEFF3;                /* Bandeau gris doux */
+}
+.about-page .about-hero h1 {
+  color: var(--ink);
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+.about-page .about-hero .lead {
+  color: var(--muted);
+  max-width: 720px;                   /* Largeur de lecture confortable */
+}
+.about-page .about-portrait {
+  border-radius: 14px;                /* Coins doux de la photo */
+  box-shadow: 0 10px 24px rgba(10,25,47,.12);
+}
+
+/* Badges (roles) */
+.about-page .role-badges .badge {
+  background: var(--sage-soft);       /* Sauge clair */
+  color: var(--ink);
+  font-weight: 700;
+  border: 1px solid rgba(0,0,0,.06);
+}
+
+/* =========================================================
+   TITRES DE SECTION
+   ========================================================= */
+.about-page h2 {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+/* =========================================================
+   TIMELINE (ligne verticale centrale + cartes alternées)
+   ========================================================= */
+/* Conteneur de la timeline */
+.about-page .timeline {
+  position: relative;
+  padding: 1rem 0;
+}
+
+/* Ligne verticale au centre */
+.about-page .timeline::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 50%; transform: translateX(-50%);
+  width: 3px;
+  background: var(--sage);            /* Ligne verte */
+  border-radius: 2px;
+  opacity: .9;
+}
+
+/* Cartes d’évènements */
+.about-page .timeline-card {
+  background: var(--surface);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+/* Marque (petit rond + icône) au début de chaque item */
+.about-page .timemark {
+  display: inline-grid;
+  place-items: center;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: #EFF4EC;                /* Vert très clair */
+  color: var(--ink);
+  border: 1px solid #DDE6D7;
+}
+
+/* Pastille sur la ligne (au niveau de chaque item) */
+.about-page .timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.about-page .timeline-item::after {
+  content: "";
+  position: absolute;
+  top: 20px;                          /* aligne avec la timemark */
+  left: 50%; transform: translate(-50%, -50%);
+  width: 9px; height: 9px;
+  background: var(--sage);
+  border: 2px solid #FFF;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--sage);  /* anneau fin */
+}
+
+/* Alignements alternés (gauche/droite) */
+.about-page .timeline-item.left  { padding-right: 52%; }  /* pousse la carte à gauche */
+.about-page .timeline-item.right { padding-left: 52%; }   /* pousse la carte à droite */
+
+/* Badges années (petite pilule à droite du titre) */
+.about-page .timeline .year {
+  background: #EFF1F4;
+  color: var(--ink);
+  font-weight: 700;
+  border-radius: 999px;
+}
+
+/* =========================================================
+   COMPÉTENCES (fond gris + barres)
+   ========================================================= */
+.about-page .skills-section {
+  background: var(--surface-alt);     /* Bande grise séparatrice */
+}
+
+/* Container des barres */
+.about-page .skill-bar {
+  height: 8px;                         /* Hauteur fine */
+  background: #E8ECEF;                 /* Rail gris clair */
+  border-radius: 999px;
+  overflow: hidden;
+}
+/* Remplissage (couleur + arrondi) */
+.about-page .skill-bar .progress-bar {
+  background: var(--ink);              /* Bleu encre (cohérent accueil) */
+  border-radius: 999px;
+}
+
+/* Carte “Ma Philosophie” */
+.about-page .philosophy {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+.about-page .philosophy i {
+  color: var(--sage);                  /* Icônes vertes */
+}
+.about-page .philosophy h5 {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+/* =========================================================
+   CARTES GÉNÉRIQUES (ombre + bordures)
+   ========================================================= */
+.about-page .border {
+  border-color: var(--border) !important;
+}
+.about-page .shadow-sm {
+  box-shadow: 0 10px 22px rgba(10,25,47,.08) !important;
+}
+
+/* =========================================================
+   RESPONSIVE (améliorer la lecture sur mobile)
+   ========================================================= */
+@media (max-width: 991.98px) {
+  /* Timeline: empile les cartes et enlève l’alternance stricte */
+  .about-page .timeline::before { left: 12px; transform: none; }     /* ligne à gauche */
+  .about-page .timeline-item { padding: 0 0 0 2.25rem; }             /* espace pour la ligne */
+  .about-page .timeline-item::after { left: 12px; transform: translate(-50%, -50%); }
+  .about-page .timeline-item.left,
+  .about-page .timeline-item.right { padding: 0 0 0 2.25rem; }       /* même padding des deux côtés */
+
+  /* Portrait : espace au-dessus en mobile */
+  .about-page .about-portrait { margin-top: .5rem; }
+}

@@ -1,0 +1,287 @@
+<!DOCTYPE html> <!-- Indique que le document est en HTML5 -->
+<html lang="fr"> <!-- La langue principale du document est le français -->
+<head> <!-- Début de l’en-tête -->
+  <meta charset="utf-8"> <!-- Encodage des caractères -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive sur mobile -->
+  <title>À propos</title> <!-- Titre affiché dans l’onglet du navigateur -->
+
+  <!-- Bootstrap CSS (grille + composants) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Importe Bootstrap -->
+
+  <!-- Icônes Bootstrap (pour les petites icônes de sections) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"> <!-- Importe les icônes -->
+
+  <!-- Ton CSS personnalisé (on l’ajoute après, dans styles.css) -->
+  <link rel="stylesheet" href="pad.css"> <!-- Feuille de style personnelle -->
+</head> <!-- Fin de l’en-tête -->
+
+<body class="about-page"> <!-- Ajoute une classe de page pour isoler le CSS de “À propos” -->
+
+  <!-- ========================= NAVBAR ========================= -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary py-3"> <!-- Barre de navigation -->
+    <div class="container"> <!-- Conteneur centré -->
+      <a class="navbar-brand fw-bold" href="index.html">AD</a> <!-- Logo/texte qui renvoie à l’accueil -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"> <!-- Bouton burger en mobile -->
+        <span class="navbar-toggler-icon"></span> <!-- Icône du bouton burger -->
+      </button> <!-- Fin bouton -->
+
+      <div class="collapse navbar-collapse" id="mainNav"> <!-- Zone repliable -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0"> <!-- Liste de liens centrée -->
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li> <!-- Lien Accueil -->
+          <li class="nav-item"><a class="nav-link active" href="apropos.html">A propos</a></li> <!-- Lien A propos (actif) -->
+          <li class="nav-item"><a class="nav-link" href="index.html#projets">Projets</a></li> <!-- Lien Projets (ancre sur l’accueil) -->
+          <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li> <!-- Lien Services (ancre) -->
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> <!-- Lien Contact -->
+        </ul> <!-- Fin liste -->
+        <a class="btn btn-danger rounded-2" href="#" download> <!-- Bouton de la navbar -->
+          Télécharger le CV <!-- Texte du bouton -->
+        </a> <!-- Fin bouton -->
+      </div> <!-- Fin collapse -->
+    </div> <!-- Fin container -->
+  </nav> <!-- Fin NAVBAR -->
+
+  <!-- ========================= HERO / EN-TÊTE ========================= -->
+  <header class="about-hero py-5"> <!-- Bandeau d’introduction avec fond gris (stylé en CSS) -->
+    <div class="container"> <!-- Conteneur central -->
+      <div class="row align-items-center g-4"> <!-- Ligne avec alignement vertical et espace -->
+        <div class="col-lg-8"> <!-- Colonne gauche large pour le texte -->
+          <h1 class="display-5 fw-bold mb-3">Du laboratoire au digital</h1> <!-- Titre principal -->
+          <p class="lead text-muted mb-4">Ma trajectoire unique de chercheur en chimie à référent digital m'a permis de développer une approche méthodique et innovante pour résoudre les défis complexes du monde numérique.</p> <!-- Sous-titre -->
+          <div class="d-flex flex-wrap gap-3 role-badges"> <!-- Petits “chips” de rôles, en ligne et responsive -->
+            <span class="badge rounded-pill px-3 py-2">Designer Graphique</span> <!-- Badge 1 -->
+            <span class="badge rounded-pill px-3 py-2">UX/UI Designer</span> <!-- Badge 2 -->
+            <span class="badge rounded-pill px-3 py-2">Digital Strategist</span> <!-- Badge 3 -->
+          </div> <!-- Fin chips -->
+        </div> <!-- Fin colonne gauche -->
+
+        <div class="col-lg-4 text-lg-end"> <!-- Colonne droite pour la photo, alignée à droite en desktop -->
+          <img src="photo2.jpg" class="img-fluid rounded-4 shadow-sm about-portrait" alt="Portrait d’Alassane Diallo"> <!-- Image du portrait (chemin à adapter) -->
+        </div> <!-- Fin colonne droite -->
+      </div> <!-- Fin ligne -->
+    </div> <!-- Fin container -->
+  </header> <!-- Fin HERO -->
+
+  <!-- ========================= PARCOURS / TIMELINE ========================= -->
+  <section class="py-5"> <!-- Section avec marges verticales -->
+    <div class="container"> <!-- Conteneur -->
+      <h2 class="text-center fw-bold mb-5">Mon Parcours</h2> <!-- Titre de section -->
+
+      <div class="timeline position-relative"> <!-- Conteneur de la timeline (ligne verticale en CSS) -->
+
+        <!-- Événement 1 (gauche) -->
+        <div class="timeline-item left"> <!-- Élément placé côté gauche (classe utilisée en CSS) -->
+          <div class="card border-0 shadow-sm timeline-card"> <!-- Carte d’événement -->
+            <div class="card-body"> <!-- Corps de la carte -->
+              <div class="d-flex align-items-center mb-2"> <!-- Ligne icône + titre -->
+                <span class="timemark me-2"><i class="bi bi-mortarboard"></i></span> <!-- Petite icône dans un rond -->
+                <h5 class="mb-0 fw-bold">Master en Chimie analytique</h5> <!-- Titre -->
+                <span class="ms-auto badge year">2015–2021</span> <!-- Années à droite -->
+              </div> <!-- Fin ligne -->
+              <p class="mb-0 text-muted">Master en chimie analytique – Développement de méthodes d'analyse innovantes en électrochimie.</p> <!-- Description -->
+            </div> <!-- Fin card-body -->
+          </div> <!-- Fin card -->
+        </div> <!-- Fin item -->
+
+        <!-- Événement 2 (droite) -->
+        <div class="timeline-item right"> <!-- Élément placé côté droit -->
+          <div class="card border-0 shadow-sm timeline-card">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2">
+                <span class="timemark me-2"><i class="bi bi-bezier"></i></span> <!-- Icône stylisée -->
+                <h5 class="mb-0 fw-bold">Recherche en Chimie</h5>
+                <span class="ms-auto badge year">2022–2023</span>
+              </div>
+              <p class="mb-0 text-muted">Doctorat en chimie analytique – Développement de méthodes d'analyse innovantes.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Événement 3 (gauche) -->
+        <div class="timeline-item left">
+          <div class="card border-0 shadow-sm timeline-card">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2">
+                <span class="timemark me-2"><i class="bi bi-cpu"></i></span>
+                <h5 class="mb-0 fw-bold">Transition Digitale</h5>
+                <span class="ms-auto badge year">2023–2024</span>
+              </div>
+              <p class="mb-0 text-muted">Formation intensive sur les compétences numériques fondamentales chez Simplon Sénégal.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Événement 4 (droite) -->
+        <div class="timeline-item right">
+          <div class="card border-0 shadow-sm timeline-card">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2">
+                <span class="timemark me-2"><i class="bi bi-award"></i></span>
+                <h5 class="mb-0 fw-bold">Formation en Référent Digital</h5>
+                <span class="ms-auto badge year">Mai 2025</span>
+              </div>
+              <p class="mb-0 text-muted">Formation intensive en référent digital chez Simplon Sénégal.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Événement 5 (gauche) -->
+        <div class="timeline-item left">
+          <div class="card border-0 shadow-sm timeline-card">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2">
+                <span class="timemark me-2"><i class="bi bi-briefcase"></i></span>
+                <h5 class="mb-0 fw-bold">Référent Digital Junior</h5>
+                <span class="ms-auto badge year">Sept 2025</span>
+              </div>
+              <p class="mb-0 text-muted">Premiers projets en tant que consultant digital freelance.</p>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- Fin timeline -->
+    </div> <!-- Fin container -->
+  </section> <!-- Fin section Parcours -->
+
+  <!-- ========================= COMPÉTENCES ========================= -->
+  <section class="py-5 skills-section"> <!-- Section compétences (fond gris en CSS) -->
+    <div class="container"> <!-- Conteneur -->
+      <h2 class="text-center fw-bold mb-5">Mes Compétences</h2> <!-- Titre de section -->
+
+      <div class="row g-4"> <!-- Grille deux colonnes -->
+        <!-- Colonne gauche : barres de progression -->
+        <div class="col-lg-6"> <!-- Colonne gauche -->
+          <h6 class="fw-bold mb-3">Niveau d’expertise</h6> <!-- Sous-titre -->
+          <!-- Barre 1 -->
+          <div class="mb-3"> <!-- Bloc d’une compétence -->
+            <div class="d-flex justify-content-between">
+              <span>UX/UI Design</span> <!-- Nom de la compétence -->
+              <span class="fw-semibold">95%</span> <!-- Pourcentage -->
+            </div>
+            <div class="progress skill-bar"> <!-- Barre de progression Bootstrap -->
+              <div class="progress-bar" role="progressbar" style="width:95%"></div> <!-- Remplissage -->
+            </div>
+          </div>
+          <!-- Barre 2 -->
+          <div class="mb-3">
+            <div class="d-flex justify-content-between">
+              <span>Gestion de Projet Agile</span>
+              <span class="fw-semibold">90%</span>
+            </div>
+            <div class="progress skill-bar">
+              <div class="progress-bar" role="progressbar" style="width:90%"></div>
+            </div>
+          </div>
+          <!-- Barre 3 -->
+          <div class="mb-3">
+            <div class="d-flex justify-content-between">
+              <span>Stratégie Digitale</span>
+              <span class="fw-semibold">88%</span>
+            </div>
+            <div class="progress skill-bar">
+              <div class="progress-bar" role="progressbar" style="width:88%"></div>
+            </div>
+          </div>
+          <!-- Barre 4 -->
+          <div class="mb-3">
+            <div class="d-flex justify-content-between">
+              <span>Marketing digital</span>
+              <span class="fw-semibold">92%</span>
+            </div>
+            <div class="progress skill-bar">
+              <div class="progress-bar" role="progressbar" style="width:92%"></div>
+            </div>
+          </div>
+          <!-- Barre 5 -->
+          <div class="mb-3">
+            <div class="d-flex justify-content-between">
+              <span>Design graphique</span>
+              <span class="fw-semibold">85%</span>
+            </div>
+            <div class="progress skill-bar">
+              <div class="progress-bar" role="progressbar" style="width:85%"></div>
+            </div>
+          </div>
+          <!-- Barre 6 -->
+          <div class="">
+            <div class="d-flex justify-content-between">
+              <span>Recherche Utilisateur</span>
+              <span class="fw-semibold">90%</span>
+            </div>
+            <div class="progress skill-bar">
+              <div class="progress-bar" role="progressbar" style="width:90%"></div>
+            </div>
+          </div>
+        </div> <!-- Fin colonne gauche -->
+
+        <!-- Colonne droite : carte “Ma philosophie” -->
+        <div class="col-lg-6"> <!-- Colonne droite -->
+          <div class="p-4 bg-white border rounded-4 shadow-sm philosophy"> <!-- Carte blanche avec bordure et ombre -->
+            <h5 class="fw-bold mb-3 text-center text-lg-start">Ma Philosophie</h5> <!-- Titre de la carte -->
+            <ul class="list-unstyled d-grid gap-3 mb-0"> <!-- Liste sans puces, espacée -->
+              <li class="d-flex align-items-start"> <!-- Ligne de liste -->
+                <i class="bi bi-flask text-success me-3 mt-1"></i> <!-- Petite icône -->
+                <div> <!-- Bloc texte -->
+                  <div class="fw-semibold">Approche Scientifique</div> <!-- Sous-titre -->
+                  <p class="mb-0 text-muted">   J’applique la rigueur et la méthodologie de la recherche à chaque projet digital.</p> <!-- Texte -->
+                </div>
+              </li>
+              <li class="d-flex align-items-start">
+                <i class="bi bi-person-check text-success me-3 mt-1"></i>
+                <div>
+                  <div class="fw-semibold">Centré Utilisateur</div>
+                  <p class="mb-0 text-muted">Chaque solution est pensée pour répondre aux besoins réels des utilisateurs finaux.</p>
+                </div>
+              </li>
+              <li class="d-flex align-items-start">
+                <i class="bi bi-graph-up-arrow text-success me-3 mt-1"></i>
+                <div>
+                  <div class="fw-semibold">Orienté Résultats</div>
+                  <p class="mb-0 text-muted">L’impact mesurable et la valeur ajoutée sont au cœur de ma démarche.</p>
+                </div>
+              </li>
+            </ul>
+          </div> <!-- Fin carte -->
+        </div> <!-- Fin colonne droite -->
+      </div> <!-- Fin row -->
+    </div> <!-- Fin container -->
+  </section> <!-- Fin section Compétences -->
+
+  <!-- ========================= FOOTER ========================= -->
+  <footer class="pt-5 pb-4" style="background-color:#0A192F; color:#EAF0F6;"> <!-- Pied de page bleu nuit -->
+    <div class="container"> <!-- Conteneur -->
+      <div class="row gy-4"> <!-- Grille -->
+        <div class="col-md-4"> <!-- Colonne 1 -->
+          <h6 class="text-uppercase">Alassane DIALLO</h6> <!-- Titre -->
+          <p class="mb-0">Spécialisé en communication digitale, UX/UI et gestion de projet agile. Du laboratoire au digital, je crée et je connecte les idées aux besoins.</p> <!-- Texte -->
+        </div> <!-- Fin col 1 -->
+
+        <div class="col-md-4"> <!-- Colonne 2 -->
+          <h6 class="text-uppercase">Navigation</h6> <!-- Titre -->
+          <ul class="list-unstyled mb-0"> <!-- Liste -->
+            <li><a href="index.html" class="link-light text-decoration-none">Accueil</a></li> <!-- Lien -->
+            <li><a href="apropos.html" class="link-light text-decoration-none">A propos</a></li> <!-- Lien -->
+            <li><a href="index.html#projets" class="link-light text-decoration-none">Projets</a></li> <!-- Lien -->
+            <li><a href="index.html#services" class="link-light text-decoration-none">Services / Compétences</a></li> <!-- Lien -->
+          </ul> <!-- Fin liste -->
+        </div> <!-- Fin col 2 -->
+
+        <div class="col-md-4"> <!-- Colonne 3 -->
+          <h6 class="text-uppercase">Contact</h6> <!-- Titre -->
+          <p class="mb-1">aloualassane72@gmail.com</p> <!-- Email -->
+          <p class="mb-3">+221 78 635 25 40</p> <!-- Téléphone -->
+          <div class="d-flex gap-3"> <!-- Icônes -->
+            <a class="link-light" href="#"><i class="bi bi-linkedin"></i></a> <!-- LinkedIn -->
+            <a class="link-light" href="#"><i class="bi bi-whatsapp"></i></a> <!-- WhatsApp -->
+          </div> <!-- Fin icônes -->
+        </div> <!-- Fin col 3 -->
+      </div> <!-- Fin row -->
+
+      <hr class="border-secondary my-4"> <!-- Séparateur -->
+      <p class="text-center small mb-0">© 2025 Alassane Diallo. Tous droits réservés.</p> <!-- Copyright -->
+    </div> <!-- Fin container -->
+  </footer> <!-- Fin FOOTER -->
+
+  <!-- Bootstrap JS (menu burger, etc.) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> <!-- Importe le JS Bootstrap -->
+</body> <!-- Fin corps -->
+</html> <!-- Fin document -->
