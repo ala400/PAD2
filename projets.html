@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Projets | Alassane Diallo</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Fichier CSS personnalisé -->
+  <link rel="stylesheet" href="pad.css">
+</head>
+<body class="projects-page">
+
+  <!-- ======= NAVBAR ======= -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary py-3"> <!-- Barre de navigation -->
+    <div class="container"> <!-- Conteneur centré -->
+      <a class="navbar-brand fw-bold" href="index.html">AD</a> <!-- Logo/texte qui renvoie à l’accueil -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"> <!-- Bouton burger en mobile -->
+        <span class="navbar-toggler-icon"></span> <!-- Icône du bouton burger -->
+      </button> <!-- Fin bouton -->
+
+      <div class="collapse navbar-collapse" id="mainNav"> <!-- Zone repliable -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0"> <!-- Liste de liens centrée -->
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li> <!-- Lien Accueil -->
+          <li class="nav-item"><a class="nav-link" href="apropos.html">A propos</a></li> <!-- Lien A propos (actif) -->
+          <li class="nav-item"><a class="nav-link active" href="projets.html">Projets</a></li> <!-- Lien Projets (ancre sur l’accueil) -->
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li> <!-- Lien Services (ancre) -->
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> <!-- Lien Contact -->
+        </ul> <!-- Fin liste -->
+        <a class="btn btn-danger rounded-2" href="#" download> <!-- Bouton de la navbar -->
+          Télécharger le CV <!-- Texte du bouton -->
+        </a> <!-- Fin bouton -->
+      </div> <!-- Fin collapse -->
+    </div> <!-- Fin container -->
+  </nav> <!-- Fin NAVBAR -->
+
+  <!-- ======= SECTION TITRE ======= -->
+  <header class="hero-top bg-secondary-subtle py-5">
+    <div class="container text-center">
+      <h1 class="display-5 fw-bold mb-2">Mes Projets</h1>
+      <p class="lead text-muted mb-0">Découvrez une sélection de projets qui illustrent mon approche méthodique et mes résultats concrets en transformation digitale.</p>
+    </div>
+  </header>
+  
+
+  <!-- ======= SECTION PROJETS ======= -->
+  <section class="container py-5">
+    <div class="row g-4">
+
+      <!-- Projet 1 : TerraFusion -->
+      <div class="col-md-6">
+        <div class="card shadow-sm h-100">
+          <img src="LOGO-TERRA-FUSION-640x630_resultat.webp" class="card-img-top" alt="Projet TerraFusion">
+          <div class="card-body">
+            <span class="badge bg-secondary mb-2">E-commerce</span>
+            <h5 class="card-title">TerraFusion - Boutique Bio</h5>
+            <p class="card-text">Création d’une plateforme e-commerce combinant cosmétique et agroalimentaire, 100% bio, avec un design épuré et une expérience fluide.</p>
+            <p><strong>Mon rôle :</strong> UX/UI Designer & Chef de projet</p>
+            <p><strong>Durée :</strong> 6 mois</p>
+            <p><strong>Technologies :</strong> HTML, CSS, Bootstrap, JavaScript</p>
+             <button class="btn btn-dark w-100" data-bs-toggle="modal" data-bs-target="#modalTerraFusion">Voir le projet</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 2 : Communication Promo -->
+      <div class="col-md-6">
+        <div class="card shadow-sm h-100">
+          <img src="com.webp" class="card-img-top" alt="Projet Communication">
+          <div class="card-body">
+            <span class="badge bg-secondary mb-2">Gestion de projet</span>
+            <h5 class="card-title">Campagne de Communication Promo</h5>
+            <p class="card-text">Coordination des équipes pour la stratégie éditoriale, gestion du rétroplanning et pilotage de la communication interne et externe.</p>
+            <p><strong>Mon rôle :</strong> Lead projet & Community Manager</p>
+            <p><strong>Durée :</strong> 4 mois</p>
+            <p><strong>Technologies :</strong> Canva, Trello, Meta Business Suite</p>
+            <button class="btn btn-dark w-100" data-bs-toggle="modal" data-bs-target="#modalCommunication">Voir le projet</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 3 : Master Class -->
+      <div class="col-md-6">
+        <div class="card shadow-sm h-100">
+          <img src="IMG_8682.jpg" class="card-img-top" alt="Projet Master Class">
+          <div class="card-body">
+            <span class="badge bg-secondary mb-2">Événementiel</span>
+            <h5 class="card-title">Master Class Mensuelle</h5>
+            <p class="card-text">Organisation et modération des masterclass mensuelles de Simplon Sénégal sur des thématiques digitales et inspirantes.</p>
+            <p><strong>Mon rôle :</strong> Lead événementiel & Modérateur</p>
+            <p><strong>Durée :</strong> 1 an</p>
+            <p><strong>Technologies :</strong> StreamYard, Canva, Google Meet</p>
+            <button class="btn btn-dark w-100" data-bs-toggle="modal" data-bs-target="#modalMasterClass">Voir le projet</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 4 : Branding Madina Taiba -->
+      <div class="col-md-6">
+        <div class="card shadow-sm h-100">
+          <img src="Déclinaison 3_resultat.webp" class="card-img-top" alt="Projet Madina Taiba">
+          <div class="card-body">
+            <span class="badge bg-secondary mb-2">Branding</span>
+            <h5 class="card-title">Madina Taiba - Identité Visuelle</h5>
+            <p class="card-text">Création complète de l’identité visuelle d’une marque artisanale sénégalaise : logo, palette de couleurs, typographie et charte graphique.</p>
+            <p><strong>Mon rôle :</strong> Graphiste & Directeur artistique</p>
+            <p><strong>Durée :</strong> 3 mois</p>
+            <p><strong>Technologies :</strong> Adobe Illustrator, Photoshop</p>
+            <button class="btn btn-dark w-100" data-bs-toggle="modal" data-bs-target="#modalMadinaTaiba">Voir le projet</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ======= MODALES ======= -->
+
+  <!-- Modal TerraFusion -->
+  <div class="modal fade" id="modalTerraFusion" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title">TerraFusion - Boutique Bio</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="LOGO-TERRA-FUSION-640x630_resultat.webp" class="img-fluid mb-3" alt="">
+          <p><strong>Description :</strong> TerraFusion est une plateforme e-commerce bio combinant produits cosmétiques et agroalimentaires. L’objectif : offrir des produits sains, naturels et locaux.</p>
+          <p><strong>Ma contribution :</strong> conception UX/UI, création de la charte graphique, pilotage du développement front-end.</p>
+          <p><strong>Soft Skills :</strong> gestion du temps, esprit d’équipe, créativité, rigueur.</p>
+          <p><strong>Outils technologiques :</strong> HTML, CSS, Bootstrap, JavaScript.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Communication -->
+  <div class="modal fade" id="modalCommunication" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title">Campagne de Communication Promo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="com.webp" class="img-fluid mb-3" alt="">
+          <p><strong>Description :</strong> Coordination de la stratégie de communication pour une cohorte d’apprenants en digital. Mise en place du calendrier éditorial et du rétroplanning.</p>
+          <p><strong>Ma contribution :</strong> lead projet, suivi des équipes, création de contenu, reporting.</p>
+          <p><strong>Soft Skills :</strong> leadership, communication, collaboration, sens de l’organisation.</p>
+          <p><strong>Outils :</strong> Canva, Trello, Meta Business Suite.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Master Class -->
+  <div class="modal fade" id="modalMasterClass" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title">Master Class Mensuelle</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="IMG_8682.jpg" class="img-fluid mb-3" alt="">
+          <p><strong>Description :</strong> Événement mensuel d’échange et de partage de connaissances sur les thématiques du digital au Sénégal.</p>
+          <p><strong>Ma contribution :</strong> organisation, animation et modération.</p>
+          <p><strong>Soft Skills :</strong> aisance orale, empathie, esprit d’équipe.</p>
+          <p><strong>Outils :</strong> StreamYard, Canva, Google Meet.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Madina Taiba -->
+  <div class="modal fade" id="modalMadinaTaiba" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title">Madina Taiba - Identité Visuelle</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="Déclinaison 3_resultat.webp" class="img-fluid mb-3" alt="">
+          <p><strong>Description :</strong> Création complète de l’identité visuelle d’une marque artisanale (logo, palette de couleurs, typographies).</p>
+          <p><strong>Ma contribution :</strong> conception graphique et direction artistique.</p>
+          <p><strong>Soft Skills :</strong> créativité, écoute client, sens du détail.</p>
+          <p><strong>Outils :</strong> Adobe Illustrator, Photoshop.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= SECTION CTA ======= -->
+  <section class="cta-section text-center py-5">
+    <div class="container">
+      <h2 class="fw-bold">Votre projet sera le prochain ?</h2>
+      <p>Chaque projet est unique et mérite une approche sur mesure. Discutons de vos besoins et objectifs pour créer ensemble quelque chose d’exceptionnel.</p>
+      <a href="contact.html" class="btn btn-dark mt-3">Démarrer un nouveau projet</a>
+    </div>
+  </section>
+
+  <!-- ========================= FOOTER ========================= -->
+  <footer class="pt-5 pb-4" style="background-color:#0A192F; color:#EAF0F6;">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-4">
+          <h6 class="text-uppercase">Alassane DIALLO</h6>
+          <p class="mb-0">Spécialisé en communication digitale, UX/UI et gestion de projet agile. Du laboratoire au digital, je crée et je connecte les idées aux besoins.</p>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-uppercase">Navigation</h6>
+          <ul class="list-unstyled mb-0">
+            <li><a href="index.html" class="link-light text-decoration-none">Accueil</a></li>
+            <li><a href="#apropos" class="link-light text-decoration-none">A propos</a></li>
+            <li><a href="#projets" class="link-light text-decoration-none">Projets</a></li>
+            <li><a href="#services" class="link-light text-decoration-none">Services / Compétences</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-uppercase">Contact</h6>
+          <p class="mb-1">aloualassane72@gmail.com</p>
+          <p class="mb-3">+221 78 635 25 40</p>
+          <div class="d-flex gap-3">
+            <a class="link-light" href="#"><i class="bi bi-linkedin"></i></a>
+            <a class="link-light" href="#"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <p class="text-center small mb-0">© 2025 Alassane Diallo. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- JS Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

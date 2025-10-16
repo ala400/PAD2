@@ -1,0 +1,177 @@
+<!DOCTYPE html> <!-- Document en HTML5 -->
+<html lang="fr"> <!-- Langue du document : français -->
+<head> <!-- Début de l'en-tête -->
+  <meta charset="utf-8"> <!-- Encodage des caractères -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive pour mobile -->
+  <title>Services | Alassane Diallo</title> <!-- Titre affiché dans l'onglet -->
+
+  <!-- Bootstrap CSS (CDN) : fournit la grille, les boutons et composants -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons : pour utiliser des icônes simples dans les cards -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Ton fichier CSS personnalisé (on te fournira le contenu juste après) -->
+  <link rel="stylesheet" href="pad.css">
+</head>
+<body class="services-page"> <!-- Ajoute la classe page pour scoper le CSS -->
+
+  <!-- ========================= NAVBAR ========================= -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary py-3">
+    <div class="container">
+      <div class="navbar-brand"><img src="logovf-removebg-preview.png" alt="mon logo" width="40" height="30"></div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="apropos.html">A propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="projets.html">Projets</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <a class="btn btn-danger rounded-2" href="CV Alassane-DIALLO-Chimiste.pdf" download>Télécharger le CV</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======= SECTION TITRE ======= -->
+  <header class="hero-top bg-secondary-subtle py-5">
+    <div class="container text-center">
+      <h1 class="display-5 fw-bold mb-2">Mes Services</h1>
+      <p class="lead text-muted mb-0">J’accompagne les organisations et porteurs de projet en transformation digitale, design d’expérience, stratégie et branding.</p>
+    </div>
+  </header>
+
+
+  <!-- SECTION PRINCIPALE : grille des services -->
+  <main class="py-5">
+    <div class="container">
+      <div class="row g-4"> <!-- g-4 = gap entre les colonnes -->
+
+        <!-- CARD 1 : UX/UI DESIGN -->
+        <div class="col-md-6 col-lg-6"> <!-- 2 colonnes sur md/lg, 1 colonne sur xs -->
+          <article class="service-card card h-100 border-0 shadow-sm"> <!-- card flexible hauteur égale -->
+            <div class="card-body d-flex"> <!-- corps de la card en flex pour aligner icône + contenu -->
+              <div class="icon-wrapper me-3"> <!-- conteneur pour l'icône -->
+                <i class="bi bi-palette-fill" aria-hidden="true"></i> <!-- icône palette -->
+              </div>
+              <div class="content"> <!-- texte du service -->
+                <h3 class="h5 fw-bold">UX / UI Design</h3> <!-- titre du service -->
+                <p class="text-muted mb-2">Conception d’interfaces centrées utilisateur, wireframes, prototypes et tests utilisateurs pour créer des expériences claires et agréables.</p> <!-- description -->
+                <ul class="list-unstyled small text-muted mb-0"> <!-- petites puces pour détails -->
+                  <li><strong>Livrables :</strong> Wireframes, prototypes, design system</li>
+                  <li><strong>Focus :</strong> Recherche utilisateur, tests & accessibilité</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- CARD 2 : GESTION DE PROJET AGILE -->
+        <div class="col-md-6 col-lg-6">
+          <article class="service-card card h-100 border-0 shadow-sm">
+            <div class="card-body d-flex">
+              <div class="icon-wrapper me-3">
+                <i class="bi bi-gear-fill" aria-hidden="true"></i> <!-- icône engrenage -->
+              </div>
+              <div class="content">
+                <h3 class="h5 fw-bold">Gestion de projet agile</h3>
+                <p class="text-muted mb-2">Pilotage de projets digitaux en méthode agile : sprint planning, gestion des priorités, coordination des équipes et suivi qualité.</p>
+                <ul class="list-unstyled small text-muted mb-0">
+                  <li><strong>Livrables :</strong> Roadmap, backlog, rétrospectives</li>
+                  <li><strong>Focus :</strong> Delivery & collaboration inter-équipes</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- CARD 3 : STRATÉGIE DIGITALE -->
+        <div class="col-md-6 col-lg-6">
+          <article class="service-card card h-100 border-0 shadow-sm">
+            <div class="card-body d-flex">
+              <div class="icon-wrapper me-3">
+                <i class="bi bi-bar-chart-fill" aria-hidden="true"></i> <!-- icône graphique -->
+              </div>
+              <div class="content">
+                <h3 class="h5 fw-bold">Stratégie digitale</h3>
+                <p class="text-muted mb-2">Définition de stratégie digitale (positionnement, acquisition, analytics) pour transformer les objectifs business en actions mesurables.</p>
+                <ul class="list-unstyled small text-muted mb-0">
+                  <li><strong>Livrables :</strong> Audit, plan d’action, KPI</li>
+                  <li><strong>Focus :</strong> ROI & optimisations continues</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- CARD 4 : BRANDING & IDENTITÉ -->
+        <div class="col-md-6 col-lg-6">
+          <article class="service-card card h-100 border-0 shadow-sm">
+            <div class="card-body d-flex">
+              <div class="icon-wrapper me-3">
+                <i class="bi bi-award-fill" aria-hidden="true"></i> <!-- icône médaille -->
+              </div>
+              <div class="content">
+                <h3 class="h5 fw-bold">Branding & Identité visuelle</h3>
+                <p class="text-muted mb-2">Création d’identités visuelles complètes : logo, palette, typographie et guide de marque pour assurer cohérence et reconnaissance.</p>
+                <ul class="list-unstyled small text-muted mb-0">
+                  <li><strong>Livrables :</strong> Logo, charte graphique, templates</li>
+                  <li><strong>Focus :</strong> Cohérence visuelle & positionnement</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div> <!-- fin row -->
+    </div> <!-- fin container -->
+  </main>
+
+  <!-- CTA bas de page pour contacter -->
+  <section class="py-5 text-center bg-sage-cta"> <!-- fond sauge léger -->
+    <div class="container">
+      <h2 class="fw-bold mb-2">Envie de travailler ensemble ?</h2>
+      <p class="text-muted mb-3">Discutons de votre projet et définissons la meilleure stratégie pour atteindre vos objectifs.</p>
+      <a href="contact.html" class="btn btn-dark">Contactez-moi</a> <!-- bouton global -->
+    </div>
+  </section>
+
+  <!-- ========================= FOOTER ========================= -->
+  <footer class="pt-5 pb-4" style="background-color:#0A192F; color:#EAF0F6;">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-4">
+          <h6 class="text-uppercase">Alassane DIALLO</h6>
+          <p class="mb-0">Spécialisé en communication digitale, UX/UI et gestion de projet agile. Du laboratoire au digital, je crée et je connecte les idées aux besoins.</p>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-uppercase">Navigation</h6>
+          <ul class="list-unstyled mb-0">
+            <li><a href="index.html" class="link-light text-decoration-none">Accueil</a></li>
+            <li><a href="#apropos" class="link-light text-decoration-none">A propos</a></li>
+            <li><a href="#projets" class="link-light text-decoration-none">Projets</a></li>
+            <li><a href="#services" class="link-light text-decoration-none">Services / Compétences</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-uppercase">Contact</h6>
+          <p class="mb-1">aloualassane72@gmail.com</p>
+          <p class="mb-3">+221 78 635 25 40</p>
+          <div class="d-flex gap-3">
+            <a class="link-light" href="#"><i class="bi bi-linkedin"></i></a>
+            <a class="link-light" href="#"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <p class="text-center small mb-0">© 2025 Alassane Diallo. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (nécessaire pour le menu mobile) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
